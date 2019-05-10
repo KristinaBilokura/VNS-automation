@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>VNS-automation</groupId>
+    <artifactId>VNS-automation</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ui-automation</module>
+        <module>api-automation</module>
+    </modules>
+
+    <properties>
+        <webdriver.manager.version>3.0.0</webdriver.manager.version>
+        <org.seleniumhq.selenium>3.11.0</org.seleniumhq.selenium>
+        <org.testng>6.13.1</org.testng>
+        <log4j>1.2.17</log4j>
+        <allure.adaptor.version>1.5.4</allure.adaptor.version>
+        <allure.version>2.6.0</allure.version>
+        <aspectj.version>1.8.10</aspectj.version>
+        <allure.results.directory>
+            ${project.build.directory}/allure-results
+        </allure.results.directory>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdriver.manager.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${org.seleniumhq.selenium}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${org.testng}</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j}</version>
+        </dependency>
+    </dependencies>
+
+</project>
